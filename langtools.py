@@ -64,10 +64,18 @@ def getdiff(lst1, lst2):
 
 def getIndexOfMinVal(lst):
 	""" Find index of smallest value in a list """
-	minIndex = 0
-	val = lst[0]
+	
+	#initialize current min value and index to first element
 
-	for i in range(len(lst)):
+	minIndex = 0 # index of current minimal value
+	val = lst[0] # current minimal value
+
+	# loop through all elements
+
+	for i in range(1, len(lst)):
+		
+		# if current value is smaller than current minimum -> update values
+
 		if lst[i] < val:
 			minIndex = i
 			val = lst[i]
