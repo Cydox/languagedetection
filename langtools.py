@@ -3,20 +3,19 @@ import os
 def getfreq(lst):
 	""" Get frequency of characters in a list of strings """
 	# initialize counters
-	numberOfCharacters = 0
 	freqlist = []
 	for x in range(26):
 		freqlist.append(0.0)
-	
+
 	# count characters
-	for x in lst:
-		for y in x:
-			a = ord(str.lower(y)) - 97
-			if a >= 0 and a <= 25:
-				freqlist[a] += 1
-				numberOfCharacters += 1
+
+	for i in range(26):
+		for x in lst:
+			freqlist[i] += str.lower(x).count(chr(i + 97))
 	
 	# convert to frequency
+
+	numberOfCharacters = sum(freqlist)
 
 	for i in range(len(freqlist)):
 		freqlist[i] /= numberOfCharacters
@@ -25,10 +24,12 @@ def getfreq(lst):
 	
 def getlang(folder):
 	""" Get language ref info from txt file """
+
 	lgnames = []
 	lgfreqs = []
 
 	# Get filenames
+
 	lst = os.listdir(folder)
 
 	for fname in lst:
@@ -62,6 +63,7 @@ def getdiff(lst1, lst2):
 	return total
 
 def getIndexOfMinVal(lst):
+	""" Find index of smallest value in a list """
 	minIndex = 0
 	val = lst[0]
 
