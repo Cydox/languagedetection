@@ -31,6 +31,4 @@ for i in range(4):
 	plt.bar(xbar, lgfreq[i], 0.6, color="b")
 	plt.plot(freq, "r.")
 
-
-
 plt.show()

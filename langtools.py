@@ -68,5 +68,5 @@ def getIndexOfMinVal(lst):
 	for i in range(len(lst)):
 		if lst[i] < val:
 			minIndex = i
-			val = lst [i]
+			val = lst[i]
 	return minIndex
