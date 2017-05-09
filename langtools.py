@@ -16,7 +16,7 @@ def getfreq(lst):
 		# loop through all strings
 		for x in lst:
 
-			# add the amount of character chr(i + 97) (a-z) to the
+			# add the number of character chr(i + 97) (a-z) to the
 			# respective element of freqlist (repeated for each string
 			# in lst), ignoring the case of the letters.
 			freqlist[i] += str.lower(x).count(chr(i + 97))
