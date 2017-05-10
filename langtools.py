@@ -61,7 +61,7 @@ def getdiff(lst1, lst2):
 	
 	# loop over each character while keeping a total of the squared differences
 	# between lst1[i] and lst2[i]. This will return the square of the distance
-	# between to 26 dimensional vectors.
+	# between two 26 dimensional vectors.
 	total = 0
 	for i in range(26):
 		total += (lst1[i] - lst2[i]) * (lst1[i] - lst2[i])
